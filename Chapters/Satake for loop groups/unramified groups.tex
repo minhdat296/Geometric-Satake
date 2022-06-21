@@ -1,0 +1,122 @@
+\section{The case of unramified groups}
+    \subsection{Affine Grassmannians}
+        \subsubsection{\textit{Pr\'elude}: Ind-schemes}
+            One of the most important properties of the affine Grassmannian associated to (the loop group of) a split reductive group is that it is an ind-proper ind-scheme. This is because eventually. this property will help us make sense of the (big) Satake, not merely as a category of perverse sheaves on an algebraic stack, but rather simpler as a $2$-colimit of categories of perverse sheaves on schematic components. As such, before we launch into a discussion of affine Grassmannians associated to split reductive groups, let us write down the precise definition of what we mean by an \say{ind-scheme}, as this is a notion that differs very subtly from the more familiar notion of formal schemes (cf. \cite[Section II.9]{hartshorne}).
+            \begin{definition}[Ind-schemes] \label{def: ind_schemes}
+                The category of \textbf{ind-schemes}, denoted by $\Ind\Sch$, is the ind-completion of the subcategory of the category $\Sch$ of schemes spanned by closed immersions. An object $\frakX \in \Ob(\Ind\Sch) \setminus \Ob(\Sch)$ is called a \textbf{strict} ind-scheme. Furthermore, should $\kappa \geq |\Ob(\Sch)|$ be some cardinal then objects of the ind-completion $\Ind\Sch^{< \kappa}$ of some $\kappa$-small subcategory of $\Sch$ wherein the morphisms are closed immersions shall be known as \textbf{$\kappa$-ind-schemes}.
+            \end{definition}
+            \begin{remark}[Colimits of ind-schemes] \label{remark: colimits_of_ind_schemes}
+                Due to the fact that colimits commute with one another and the fact that every colimit can be decomposed into coproducts and filtered colimits, the category of ind-schemes admits all colimits. 
+            \end{remark}
+            \begin{proposition}[Representable morphisms of ind-schemes] \label{prop: representable_morphisms_of_ind_schemes}
+                Let $S$ be a scheme and $f: F \to \frakX$ be a morphism from a presheaf $F \in \Ob(\Psh(\Sch_{/S}))$ to an ind-scheme $\frakX \in \Ob(\Ind\Sch_{/S})$ (recall that $\Psh(\Sch_{/S})$ is cocomplete, so it contains $\Ind\Sch_{/S}$ as a full subcategory). If $f: F \to \frakX$ is representable (by this, we mean that for all $T \in \Ob(\Sch_{/S})$ and all morphisms $t: T \to \frakX$, the pullback of presheaves $F \x_{f, \frakX, t} T$ is a $T$-scheme) then $F$ will also be an ind-scheme over $S$. 
+            \end{proposition}
+                \begin{proof}
+                    This comes directly from the fact that filtered colimits commute with finite limits in topoi and the fact that closed immersions are particular instances of monomorphisms of schemes, and thus commute with other limits such as pullbacks.
+                \end{proof}
+            \begin{corollary}
+                Let $\frakX \in \Ob(\Ind\Sch_{/S})$ be an ind-scheme over a given base scheme $S$ and suppose that it admits a presentation $\frakX \cong \underset{i \in \calI}{\colim} X_i$. Each of the canonical maps $X_i \to \frakX$ is thus representable by a closed immersion of $S$-schemes. 
+            \end{corollary}
+            \begin{remark}[Finite limits of ind-schemes] \label{remark: finite_limits_of_ind_schemes}
+                Filtered colimits commute with finite limits in topoi, and since $\Ind\Sch$ is a full subcategory of $\Psh(\Sch)$, the category $\Ind\Sch$ admits all finite limits. In particular, it admits all finite pullbacks and all monomorphisms, and as such notions of sub-ind-schemes and base-changes of ind-schemes are well-defined. In fact, since open immersions and closed immersions of schemes are particular cases of monomorphisms in $\Sch$, open immersions and closed immersions of ind-schemes are just morphisms that are representable by open immersions and closed immersions. 
+            \end{remark}
+            \begin{remark}
+                It is clear that ind-schemes satisfy Zariski, \'etale, and fppf descent, but that they satsify fpqc descent is a subtler statement. This ultimately boils down to the fact that fpqc sites are large and therefore the sheaf topos thereon are also large (recall that sheafification is not guaranteed for large topoi), while one can always restrict down to a small site when working with the other topologies.
+            \end{remark}
+            \begin{proposition}[Ind-schemes are fpqc sheaves] \label{prop: ind_schemes_are_fpqc_sheaves}
+                Let $S$ be a scheme. Then, $\Ind\Sch_{/S}$ will be a full subcategory of the large topos $\Sh(S_{\fpqc})$.
+            \end{proposition}
+                \begin{proof}
+                    
+                \end{proof}
+            
+            \begin{definition}[Underlying topological spaces of ind-schemes] \label{def: underlying_topological_spaces_of_ind_schemes}
+                Let $\frakX$ be an ind-schemes with presentation $\frakX \cong \underset{i \in \calI}{\colim} X_i$. Then, the underlying topological space of $\frakX$, denoted by $|\frakX|$, shall be given by the following colimit of topological spaces taken over the category $\Fld$ of fields and field extensions:
+                    $$|\frakX| \cong \underset{\kappa \in \Fld}{\colim} |X_i(\kappa)|$$
+                wherein $|\frakX|$ is given the colimit topology.
+            \end{definition}
+            \begin{definition}[Pro-ringed spaces] \label{def: pro_ringed_spaces}
+                
+            \end{definition}
+            \begin{proposition}[Ind-schemes are locally pro-ringed spaces] \label{prop: ind_schemes_are_locally_pro_ringed_spaces}
+                
+            \end{proposition}
+                \begin{proof}
+                    
+                \end{proof}
+    
+        \subsubsection{The affine Grassmannian for \texorpdfstring{$\GL_n$}{}}
+            \begin{definition}[Jet spaces] \label{def: jet_spaces}
+                If $X$ is a scheme over some commutative ring $k$ then we shall denote by $X[t]/t^n$ its associated \textbf{$n^{th}$ jet space}, which is the presheaf on $\Sch_{/\Spec k}^{\aff}$ given by $\Spec R \mapsto X(\Spec R[t]/t^n)$.
+            \end{definition}
+            \begin{definition}[Loop spaces] \label{def: loop_spaces}
+                If $X$ is a scheme over a commutative ring $k$ then its associated \textbf{positive loop space} $X[\![t]\!]$ shall be the presheaf on $\Sch_{/\Spec k}^{\aff}$ given by $\Spec R \mapsto X(\Spf R[\![t]\!])$. Furthermore, the \textbf{loop space} associated to $X$, which we denote by $X(\!(t)\!)$, shall be the presheaf on $\Sch_{/\Spec k}^{\aff}$ given by $\Spec R \mapsto X(\Spec R(\!(t)\!))$.
+            \end{definition}
+            \begin{remark}
+                It is easy to see - using the fact that hom-functors preserve limits - that $X[\![t]\!] \cong \underset{n \in \N}{\lim} X[t]/t^{n + 1}$ for all $k$-schemes $X$, with the $\N$-cofiltered limit here being taken in the presheaf topos over the small fpqc site of $\Spec k$. As such, should $X$ is be of finite type over $\Spec k$, the associated positive loop space $X[\![t]\!]$ shall be of pro-finite type over $\Spec k$: in particular, this means that positive loop spaces of algebraic groups are of pro-finite type.
+            \end{remark}
+            The following is a technical result, necessary for the establishment of the affine Grassmannian for connected reductive groups $G$ as the fpqc quotient $G(\!(t)\!)/G[\![t]\!]$.
+            \begin{proposition}[Loop spaces are fpqc sheaves] \label{prop: loop_spaces_are_fpqc_sheaves}
+                Let $X$ be a scheme over finite type over a field $k$. Then, both $X[\![t]\!]$ and $X(\!(t)\!)$ will satisfy fpqc descent. 
+            \end{proposition}
+                \begin{proof}
+                        
+                \end{proof}
+            
+            \begin{definition}[Integral lattices] \label{def: integral_lattices}
+                Let $k$ be a commutative ring. A \textbf{$k$-integral lattice} of rank $n \geq 1$ is thus a finite and Zariski-locally free $k[\![t]\!]$-submodule $\Lambda \subseteq k(\!(t)\!)^{\oplus n}$ such that $\Lambda \tensor_{k[\![t]\!]} k(\!(t)\!) \cong k(\!(t)\!)^{\oplus n}$. 
+            \end{definition}
+            \begin{definition}[The affine Grassmannian for $\GL_n$] \label{def: the_affine_grassmannian_for_GLn}
+                Let $k$ be a commutative ring and fix a positive integer $n \geq 1$. The \textbf{affine Grassmannian} associated to the connected reductive group $k$-scheme $(\GL_n)_k$, denoted by $\Gr_{\GL_n/k}$ (or $\Gr_{\GL_n}$ when $k$ is clearly understood from the context) or simply $\Gr_n$, is defined to be the presheaf on $\Sch_{/\Spec k}^{\aff}$ given by $\Spec R \mapsto \left\{ \text{ $R$-integral lattices $\Lambda \subseteq R(\!(t)\!)^{\oplus n}$ } \right\}$.
+            \end{definition}
+            
+            In order to show that the affine Grassmannian for $\GL_n$ is indeed an ind-proper (strict) ind-schemes, we shall however need to introduce a preliminary construction: that of truncated affine Grassmannians. The point is that these truncations of $\Gr_n$ are first of all proper and second of all, shall form an increasing diagram of closed immersions whose colimit coincides with $\Gr_n$ itself, thereby making $\Gr_n$ ind-proper as an ind-scheme by definition.
+            \begin{definition}[Truncated affine Grassmannians] \label{def: truncated_affine_grassmannians}
+                Fix a commutative ring $k$. For any pair of integers $a \leq b$, denote by $\Gr_{[a, b]}$ for the subfunctor of $\Gr_n$ (and note that $\Gr_n = \Gr_{[0, n]}$) given by $\Spec R \mapsto \left\{ \Lambda \in \Gr_n(R) \mid t^a R[\![t]\!]^{\oplus n} \subseteq \Lambda \subseteq t^b R[\![t]\!]^{\oplus n} \right\}$ and called the \textbf{$[a, b]$-truncated affine Grassmannian} associated to $\GL_n$ over $\Spec k$.
+            \end{definition}
+            \begin{proposition}[Truncated Grassmannians are proper] \label{prop: truncated_grassmannians_are_proper}
+                Over any commutative ring $k$, the truncated Grassmannian $\Gr_{[a, b]}$ over $\Spec k$ as in definition \ref{def: truncated_affine_grassmannians} is a proper scheme over $\Spec k$.
+            \end{proposition}
+                \begin{proof}
+                    
+                \end{proof}
+            \begin{remark}[Ind-schemes and formal schemes] \label{remark: ind_schemes_and_formal_schemes}
+                While formal schemes and ind-schemes are bothj 
+            \end{remark}
+            \begin{proposition}[The colimit over truncated Grassmannians] \label{prop: the_colimit_over_truncated_grassmannians}
+                Let $k$ be an arbitrary commutative ring. Then, we have an isomorphism of fpqc sheaves over $\Spec k$ as follows (wherein $\simp[1]$ denotes the $1$-simplex $\{0 \to 1\}$, which we shall view as a filtered category), wherein the transition morphisms are closed immersions of $k$-schemes:
+                    $$\Gr_n \cong \underset{ [a, b] \in \N^{\simp[1]} }{\colim} \Gr_{[a, b]}$$
+            \end{proposition}
+                \begin{proof}
+                        
+                \end{proof}
+            \begin{corollary}[$\Gr_{\GL_n}$ is an ind-scheme] \label{coro: affine_grassmannian_for_GLn_is_an_ind_scheme}
+                Let $k$ be a commutative ring. Then, the affine Grassmannian $\Gr_{\GL_n/k}$ is an ind-proper ind-scheme over $\Spec k$. 
+            \end{corollary}
+            \begin{corollary}[The affine Grassmannian for $\GL_n$ is an fpqc sheaf] \label{lemma: the_affine_grassmannian_for_GLn_is_an_fpqc_sheaf}
+                Let $k$ be a commutative ring and fix a positive integer $n \geq 1$. Then the affine Grassmannian $\Gr_{\GL_n/k}$ as in definition \ref{def: the_affine_grassmannian_for_GLn} is a sheaf on the small fpqc site of $\Spec k$.
+            \end{corollary}
+                
+        \subsubsection{Affine Grassmannians for general unramified split reductive groups}
+        
+        \subsubsection{Schubert cells}
+            \begin{remark}[Action of loop groups on affine Grassmannians] \label{remark:" action_of_loop_groups_on_affine_grassmannians}
+                
+            \end{remark}
+            \begin{convention}[Loop group orbits inside affine Grassmannians] \label{conv: loop_group_orbits_inside_affine_grassmannians}
+                
+            \end{convention}
+        
+    \subsection{Satake categories for split reductive groups}
+        \subsubsection{Construction and basic properties}
+        
+        \subsubsection{Universal local acyclicity}
+        
+        \subsubsection{Symmetric monoidal structures via convolutions}
+        
+        \subsubsection{Tannakian structures on Satake categories}
+        
+    \subsection{The Geometric Satake Equivalence for unramified split reductive groups}
+        \subsubsection{The Satake Equivalence over geometric points}
+        
+        \subsubsection{Galois descent}
