@@ -68,15 +68,21 @@
             \begin{definition}[Loop spaces] \label{def: loop_spaces}
                 If $X$ is a scheme over a commutative ring $k$ then its associated \textbf{positive loop space} $X[\![t]\!]$ shall be the presheaf on $\Sch_{/\Spec k}^{\aff}$ given by $\Spec R \mapsto X(\Spf R[\![t]\!])$. Furthermore, the \textbf{loop space} associated to $X$, which we denote by $X(\!(t)\!)$, shall be the presheaf on $\Sch_{/\Spec k}^{\aff}$ given by $\Spec R \mapsto X(\Spec R(\!(t)\!))$.
             \end{definition}
-            \begin{remark}
-                It is easy to see - using the fact that hom-functors preserve limits - that $X[\![t]\!] \cong \underset{n \in \N}{\lim} X[t]/t^{n + 1}$ for all $k$-schemes $X$, with the $\N$-cofiltered limit here being taken in the presheaf topos over the small fpqc site of $\Spec k$. As such, should $X$ is be of finite type over $\Spec k$, the associated positive loop space $X[\![t]\!]$ shall be of pro-finite type over $\Spec k$: in particular, this means that positive loop spaces of algebraic groups are of pro-finite type.
+            \begin{remark}[Loop spaces as cofiltered limits of jet spaces] \label{remark: loop_spaces_as_cofiltered_limits_of_jet_spaces}
+                It is easy to see - using the fact that hom-functors preserve limits - that:
+                    $$X[\![t]\!](\Spec R) \cong X(\Spf R[\![t]\!]) \cong X\left( \underset{n \in \N}{\colim} \Spec R[t]/t^{n + 1} \right) \cong \underset{n \in \N}{\lim} X[t]/t^{n + 1}(\Spec R)$$
+                for all $k$-schemes $X$ and all $k$-algebras $R$, with the $\N$-cofiltered limit in the last expression being taken in the presheaf topos\footnote{Recall that large topoi are still complete, so our limit indeed exists.} over the (large) fpqc site of $\Spec k$. As such, should $X$ is be of finite type over $\Spec k$, the associated positive loop space $X[\![t]\!]$ shall be of pro-finite type over $\Spec k$: in particular, this means that positive loop spaces of algebraic groups are of pro-finite type.
+                
+                Also, because cofiltered limits exist in the category of affine schemes, the positive loop space $X[\![t]\!]$ associated to a given scheme $X$ shall be affine in the event that $X$ itself is affine\footnote{So for instance, the positive loop space $G(\!(t)\!)$ of a linear algebraic group $G$ is affine.}. 
             \end{remark}
-            The following is a technical result, necessary for the establishment of the affine Grassmannian for connected reductive groups $G$ as the fpqc quotient $G(\!(t)\!)/G[\![t]\!]$.
+            \begin{remark}[Loop groups] \label{remark: loop_groups}
+                Since we will ultimately be concerned with loop spaces attached to certain group schemes, it should be noted that if $k$ is a commutative ring and $G$ is a group $k$-scheme then $G[\![t]\!]$ and $G(\!(t)\!)$ will both be group $k$-schemes as well, thanks to the general categorical fact that limits commute with one another.
+            \end{remark}
             \begin{proposition}[Loop spaces are fpqc sheaves] \label{prop: loop_spaces_are_fpqc_sheaves}
                 Let $X$ be a scheme over finite type over a field $k$. Then, both $X[\![t]\!]$ and $X(\!(t)\!)$ will satisfy fpqc descent. 
             \end{proposition}
                 \begin{proof}
-                        
+                    Sheaf topoi, be they large or small (in the set-theoretical sense), are complete, so $X[\![t]\!]$ being an fpqc sheaf is a trivial consequence of the fact that schemes are (representable) fpqc sheaves and remark \ref{remark: loop_spaces_as_cofiltered_limits_of_jet_spaces} together.
                 \end{proof}
             
             \begin{definition}[Integral lattices] \label{def: integral_lattices}
