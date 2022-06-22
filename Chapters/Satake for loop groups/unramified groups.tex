@@ -36,14 +36,30 @@
                 wherein $|\frakX|$ is given the colimit topology.
             \end{definition}
             \begin{definition}[Pro-ringed spaces] \label{def: pro_ringed_spaces}
-                
+                A \textbf{pro-ringed space} is a pair $(|\frakX|, \calO_{\frakX})$ of a topological space $|\frakX|$ and a pro-object $\calO_{\frakX}$ of the category of sheaves of commutative rings on $|\frakX|$ and surjective homomorphisms between them\footnote{This is sometimes referred to as the category of sheaves of \textit{strict} commutative pro-rings, but we avoid this terminology.}; like in the setting of ringed spaces, $\calO_{\frakX}$ is known as the \textbf{structure sheaf}. A \textbf{locally pro-ringed space} is a pro-ringed space $(|\frakX|, \calO_{\frakX})$ such that for all points $x \in |\frakX|$, the stalk $\calO_{\frakX, x}$ at $x$ of the structure sheaf $\calO_{\frakX}$ is a cofiltered limit over a diagram of local rings wherein the transition morphisms are surjective (local\footnote{The image of a local ring under a surjective homomorphism is once again a local ring.}) homomorphisms.  
             \end{definition}
-            \begin{proposition}[Ind-schemes are locally pro-ringed spaces] \label{prop: ind_schemes_are_locally_pro_ringed_spaces}
-                
+            \begin{lemma}[Ind-schemes are locally pro-ringed spaces] \label{lemma: ind_schemes_are_locally_pro_ringed_spaces}
+                Let $\frakX$ be an ind-scheme with presentation $\frakX \cong \underset{i \in \calI}{\colim} X_i$. Then the pair $(|\frakX|, \calO_{\frakX})$ wherein $\calO_{\frakX}$ is the sheaf of pro-rings on $|\frakX|$ such that for 
+            \end{lemma}
+                \begin{proof}
+                    
+                \end{proof}
+            \begin{proposition}[Hilbert's \textit{Nullstellensatz} for ind-schemes] \label{prop: nullstellensatz_for_ind_schemes}
+                Let $\frakX$ be an ind-scheme. There is an adjoint equivalence of categories:
+                    $$
+                        \begin{tikzcd}
+                        	{\left\{\text{Quasi-coherent $\calO_{\frakX}$-ideals}\right\}} & {\left\{\text{Closed subsets of $|\frakX|$}\right\}}
+                        	\arrow["{\Ind\Spec }"', bend right, from=1-1, to=1-2]
+                        	\arrow["\Gamma"', bend right, from=1-2, to=1-1]
+                        \end{tikzcd}
+                    $$
             \end{proposition}
                 \begin{proof}
                     
                 \end{proof}
+            \begin{remark}[Ind-schemes vs. formal schemes] \label{remark: ind_schemes_vs_formal_schemes}
+                
+            \end{remark}
     
         \subsubsection{The affine Grassmannian for \texorpdfstring{$\GL_n$}{}}
             \begin{definition}[Jet spaces] \label{def: jet_spaces}
